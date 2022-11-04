@@ -1,6 +1,6 @@
-let addMessage = document.querySelector("#message");
-let addButton = document.querySelector(".add");
-let todo = document.querySelector('todo')
+let addMessage = document.querySelector(".message");
+let addButton = document.querySelector(".button");
+let todo = document.querySelector("#date");
 let todoList = [];
 
 addButton.addEventListener("click", function () {
@@ -10,5 +10,11 @@ addButton.addEventListener("click", function () {
     important: false,
   };
   todoList.push(newTodo);
-  console.log(todoList);
+  displayMessages();
 });
+function displayMessages() {
+  todoList.forEach(function (item, i) {
+    let displayMessage = `Our tasks: ${addMessage.value}`;
+    console.log('displayMessage: ', displayMessage);
+  });
+}
